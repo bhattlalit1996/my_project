@@ -21,19 +21,20 @@ const dispatch = useDispatch();
     return(
         <>
         <div className="div1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfarRj6ZapjQwTjbwUJqarxDhtiRREkXiVEA&usqp=CAU" alt="time-logo"></img></div>
-        <div className="div2"><h1>Current time is: {currentTime} </h1></div>
+        <div className="div2"><h2>Current time is: {currentTime} </h2></div>
         <div className="div3">
         <Button onClick={()=>dispatch(getTime())} variant="outlined">
         Click Here
       </Button></div>
-        <div className="div4"><span>{content.map(x=>{
+        <div className="div4"><span>{content.map(entry=>{
             return (
-                <>{x} 
+                <>
+                {entry} 
                 <Divider />
                 </>
             );
         })}</span></div>
-        <div className="div5"><h1>You clicked {numOfClick} times. </h1></div>
+        <div className="div5"><h2>You clicked {numOfClick} times. </h2></div>
         </>
     );
 }
